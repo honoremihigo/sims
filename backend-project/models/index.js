@@ -12,8 +12,9 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_HOST,
     dialect: 'mysql',
+    ...(process.env.NODE_ENV === 'production' ? { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } } } : {}),
     port: process.env.DB_PORT || 3306,
-    logging: false, // Set to console.log to see SQL queries
+    logging: process.env.NODE_ENV === 'production'? console.log : false, // Set to console.log to see SQL queries
     pool: {
       max: 5,
       min: 0,

@@ -12,9 +12,13 @@ const reportRoutes = require('./routes/reportRoutes');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
-app.use(cors());
-// Middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin: process.env.CORS_ORIGIN || '*', // Allow all origins or specify a specific origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    
+  }
+));
 app.use(bodyParser.json());
 app.use(express.json());
 
