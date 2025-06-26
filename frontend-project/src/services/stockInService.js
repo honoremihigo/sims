@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/stock-in';
+const API_URL = 'https://sims-5u4f.onrender.com/api/stock-in';
 
 export const getStockIns = async () => {
   const response = await axios.get(API_URL);

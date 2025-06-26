@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/spare-parts';
+const API_URL = 'https://sims-5u4f.onrender.com/api/spare-parts';
 
 export const getSpareParts = async () => {
   const response = await axios.get(API_URL);

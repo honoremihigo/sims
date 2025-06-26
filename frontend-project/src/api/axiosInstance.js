@@ -1,8 +1,10 @@
 // src/api/axiosInstance.js
 import axios from 'axios';
 
+export const API_URL = 'https://sims-5u4f.onrender.com';
+
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: API_URL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',

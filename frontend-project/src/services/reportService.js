@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/reports';
+const API_URL = 'https://sims-5u4f.onrender.com/api/reports';
 
 export const getReport = async () => {
   try {
